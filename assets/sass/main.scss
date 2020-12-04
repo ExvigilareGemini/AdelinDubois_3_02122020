@@ -2,23 +2,25 @@
 @import "./utils/variables";
 @import "./utils/maps";
 @import "./utils/mixins";
+
 // vendors
 
 // base
-@import "./base/sectionparameters";
 @import "./base/typography";
 @import "./base/body";
 
 
-// @import "./base/test";
+@import "./base/test";
 
 // components
+@import "./components/buttons";
 
 // layouts
 @import "./layouts/header";
 @import "./layouts/footer";
 
 // pages
+@import "./pages/acceuil";
 
 // themes
 

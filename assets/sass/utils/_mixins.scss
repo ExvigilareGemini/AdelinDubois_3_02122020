@@ -6,4 +6,21 @@
         margin: map-get($map: $param, $key: param_margin);
         }
     }
-}
+};
+
+// Centrage avec flexbox
+@mixin flex_centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+};
+
+// Centrage flex_centered + alignement du titre à gauche
+@mixin flex_centered_RestoFunct {
+    @include flex_centered;
+        justify-content: space-around;
+            &__head {
+                align-self: flex-start;
+                margin-left: 20px;
+            }
+};
