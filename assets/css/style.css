@@ -1,0 +1,39 @@
+.body .header {
+  height: 60px;
+  background-color: #ffffff;
+  margin: 0;
+}
+.body .localisation {
+  height: 340px;
+  background-color: #f6f6f6;
+  margin: 0;
+}
+.body .functioning {
+  height: 440px;
+  background-color: #ffffff;
+  margin: 0;
+}
+.body .restaurant {
+  height: 1250px;
+  background-color: #eaeaea;
+  margin: 0;
+}
+.body .footer {
+  height: 200px;
+  background-color: #353535;
+  margin: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

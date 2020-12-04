@@ -1,0 +1,43 @@
+$colors: (
+    header: #ffffff,
+    localisation: #f6f6f6,
+    functioning: #ffffff,
+    restaurant: #eaeaea,
+    footer: #353535,
+);
+
+$box_height: (
+    header: 60px,
+    localisation: 340px, 
+    functioning: 440px,
+    restaurant: 1250px,
+    footer: 200px
+);
+
+$section_param: (
+    header: (
+        param_height: map-get($map: $box_height, $key: header),
+        param_color: map-get($map: $colors, $key: header),
+        param_margin: 0
+    ),
+    localisation: (
+        param_height: map-get($map: $box_height, $key: localisation),
+        param_color: map-get($map: $colors, $key: localisation),
+        param_margin: 0
+    ),
+    functioning: (
+        param_height: map-get($map: $box_height, $key: functioning),
+        param_color: map-get($map: $colors, $key: functioning),
+        param_margin: 0
+    ),
+    restaurant: (
+        param_height: map-get($map: $box_height, $key: restaurant),
+        param_color: map-get($map: $colors, $key: restaurant),
+        param_margin: 0
+    ),
+    footer:(
+        param_height: map-get($map: $box_height, $key: footer),
+        param_color: map-get($map: $colors, $key: footer),
+        param_margin: 0
+    )
+);

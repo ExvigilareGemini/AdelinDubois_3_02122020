@@ -1,0 +1,9 @@
+@mixin section_creation($box_param_mixin) {
+    @each $section, $param in $box_param_mixin {
+        .#{$section} {
+        height: map-get($map: $param, $key: param_height);
+        background-color: map-get($map: $param, $key: param_color);
+        margin: map-get($map: $param, $key: param_margin);
+        }
+    }
+}
