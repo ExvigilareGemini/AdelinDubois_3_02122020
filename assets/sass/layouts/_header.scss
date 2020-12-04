@@ -1,3 +1,4 @@
 header {
-    text-align: center;
+    @include flex_centered;
+    justify-content: center;
 }
