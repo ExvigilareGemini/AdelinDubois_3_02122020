@@ -72,6 +72,7 @@ body {
   width: 90%;
   height: 250px;
   border-radius: 15px;
+  z-index: 10;
 }
 
 .restaurant_pin_cadre {
@@ -104,11 +105,23 @@ body {
   left: 90%;
 }
 
-header {
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.header__link {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 20px;
+  z-index: 10;
+}
+.header__icon {
+  position: absolute;
+  left: 25px;
+  font-size: 20px;
 }
 
 .footer {
