@@ -29,4 +29,16 @@
     align-self: flex-start;
     margin-left: 20px;
   }
-} ;
+} 
+
+@mixin cadre ($height: 100%, $width: 100%) {
+  overflow: hidden;
+  height: $height;
+  width: $width;
+}
+
+@mixin objet_fit {
+  object-fit: cover;
+        width: inherit;
+        height: inherit;
+}

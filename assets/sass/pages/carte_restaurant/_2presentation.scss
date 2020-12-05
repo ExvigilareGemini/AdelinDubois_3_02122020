@@ -1,0 +1,10 @@
+.presentation {
+    width: 100%;
+    &__cadre {
+        @include cadre;
+    }
+    &__image {
+        @include objet_fit;
+    }
+    
+}

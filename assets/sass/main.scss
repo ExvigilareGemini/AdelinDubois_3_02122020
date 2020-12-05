@@ -18,9 +18,13 @@
 @import "./layouts/footer";
 
 // pages
-@import "./pages/acceuil/0global";
+//      Initialisation de la taille des sections
+@import "./pages/0global";
+//      page d'acceuil
 @import "./pages/acceuil/2localisation";
 @import "./pages/acceuil/3functioning";
 @import "./pages/acceuil/4restaurant";
+//      pages de cartes
+@import "./pages/carte_restaurant/2presentation";
 
 // themes
