@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: map-get($map: $colors, $key: white_color);
+    padding: 10px 0 30px 20px;
+
+    &__head {
+        font-family: $font_special;
+        font-size: map-get($map: $font_size, $key: p_mid);
+        font-weight: 500;
+    }
+
+    &__icon {
+        width: 5%;
+    }
+    &__link {
+        text-decoration: none;
+        color: map-get($map: $colors, $key: white_color);
+        font-size: map-get($map: $font_size, $key: p_sm);      
+        
+        &--bold {
+            font-weight: 600;
+        }
+    }
+}
