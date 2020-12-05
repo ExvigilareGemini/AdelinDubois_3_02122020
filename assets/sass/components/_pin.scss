@@ -1,0 +1,41 @@
+.restaurant_pin {
+    height: 20%;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+
+}
+
+.restaurant_pin_cadre {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    
+    &__preview {
+        object-fit: cover;
+        width: inherit;
+        height: inherit;
+    }
+}
+
+.restaurant_pin_info { 
+    height: 30%;
+
+    &__head {
+        font-size: map-get($map: $font_size, $key: p_mid);
+        margin: 10px 0 0 10px;
+    }
+    &__adress {
+        font-size: map-get($map: $font_size, $key: p_mid);
+        margin: 0 0 0 10px;
+    }
+    &__icon {
+        position: relative;
+        top: -40%;
+        left: 90%;
+        font-size: map-get($map: $font_size, $key: icon_size);
+    }
+}

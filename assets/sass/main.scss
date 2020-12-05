@@ -9,18 +9,20 @@
 @import "./base/typography";
 @import "./base/body";
 
-
 @import "./base/test";
 
 // components
 @import "./components/buttons";
+@import "./components/pin";
 
 // layouts
 @import "./layouts/header";
 @import "./layouts/footer";
 
 // pages
-@import "./pages/acceuil";
+@import "./pages/acceuil/0global";
+@import "./pages/acceuil/2localisation";
+@import "./pages/acceuil/3functioning";
+@import "./pages/acceuil/4restaurant";
 
 // themes
-

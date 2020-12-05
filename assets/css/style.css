@@ -2,6 +2,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+p, a {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
 }
@@ -19,7 +23,6 @@ body {
   background-image: linear-gradient(170deg, #ff79da, #9356dc);
   color: #ffffff;
   font-size: 16px;
-  font-weight: 400;
   padding: 0 20px 0 20px;
 }
 
@@ -36,7 +39,6 @@ body {
 }
 .functioning_steps__number {
   margin-left: -15px;
-  font-size: 16px;
   color: #ffffff;
   background-color: #9356dc;
   height: 25px;
@@ -54,7 +56,6 @@ body {
 }
 .functioning_steps__text {
   margin-left: 20px;
-  font-size: 16px;
   font-weight: 600;
 }
 .functioning_steps--selected {
@@ -62,6 +63,45 @@ body {
 }
 .functioning_steps--selected__icon {
   color: #9356dc;
+}
+
+.restaurant_pin {
+  height: 20%;
+  width: 90%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.restaurant_pin_cadre {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant_pin_cadre__preview {
+  object-fit: cover;
+  width: inherit;
+  height: inherit;
+}
+
+.restaurant_pin_info {
+  height: 30%;
+}
+.restaurant_pin_info__head {
+  font-size: 17px;
+  margin: 10px 0 0 10px;
+}
+.restaurant_pin_info__adress {
+  font-size: 17px;
+  margin: 0 0 0 10px;
+}
+.restaurant_pin_info__icon {
+  position: relative;
+  top: -40%;
+  left: 90%;
+  font-size: 20px;
 }
 
 header {
@@ -112,6 +152,7 @@ header {
 }
 .localisation_position__icon {
   margin: 0 10px 0 -30px;
+  font-size: 20px;
 }
 
 .localisation_info {
@@ -123,8 +164,7 @@ header {
   font-weight: 600;
 }
 .localisation_info__text {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 17px;
 }
 
 .functioning {
@@ -137,16 +177,24 @@ header {
   align-self: flex-start;
   margin-left: 20px;
 }
+.functioning__head {
+  font-size: 25px;
+}
 
 .restaurant {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  padding-bottom: 30px;
 }
 .restaurant__head {
   align-self: flex-start;
   margin-left: 20px;
+}
+.restaurant__head {
+  font-size: 25px;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

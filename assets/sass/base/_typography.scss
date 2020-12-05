@@ -1,3 +1,6 @@
 * {
     font-family: $font_main ;
 }
+p, a {
+    font-size: map-get($map: $font_size, $key: p_sm);
+}
