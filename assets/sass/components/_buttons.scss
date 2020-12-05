@@ -8,3 +8,17 @@
     font-weight: 400;
     padding: 0 20px 0 20px;
 }
+
+.functioning_steps {
+    @include flex_centered_row;
+
+    height: 75px;
+    width: 80%;
+
+    border: none;
+    border-radius: 20px;
+
+        &__number {
+            float: left;
+        }
+}

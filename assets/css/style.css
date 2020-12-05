@@ -23,6 +23,19 @@ body {
   padding: 0 20px 0 20px;
 }
 
+.functioning_steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 80%;
+  border: none;
+  border-radius: 20px;
+}
+.functioning_steps__number {
+  float: left;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -64,10 +77,13 @@ header {
 
 .localisation_position {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   background-color: #eaeaea;
+}
+.localisation_position__icon {
+  margin: 0 10px 0 -30px;
 }
 
 .localisation_info {

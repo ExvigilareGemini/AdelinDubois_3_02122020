@@ -9,15 +9,21 @@
 };
 
 // Centrage avec flexbox
-@mixin flex_centered {
+@mixin flex_centered_column {
     display: flex;
     flex-direction: column;
     align-items: center;
 };
 
+@mixin flex_centered_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // Centrage flex_centered + alignement du titre à gauche
 @mixin flex_centered_RestoFunct {
-    @include flex_centered;
+    @include flex_centered_column;
         justify-content: space-around;
             &__head {
                 align-self: flex-start;

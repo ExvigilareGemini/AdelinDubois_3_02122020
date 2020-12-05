@@ -5,15 +5,19 @@
 
 .localisation {
     // Centrage des éléments de la section
-    @include flex_centered;
+    @include flex_centered_column;
 }
 
 .localisation_position {
     // Centrage des éléments de la section
-    @include flex_centered;
+    @include flex_centered_row;
 
     width: 100%;
     background-color: map-get($map: $colors, $key: grey_color );
+
+        &__icon {
+            margin: 0 10px 0 -30px;
+        }
 }
 
 .localisation_info {
