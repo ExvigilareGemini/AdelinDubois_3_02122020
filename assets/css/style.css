@@ -60,11 +60,17 @@ body {
 }
 
 .restaurant_pin {
-  height: 20%;
+  height: 250px;
   width: 90%;
   background-color: white;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
+}
+.restaurant_pin__link {
+  position: absolute;
+  width: 90%;
+  height: 250px;
   border-radius: 15px;
 }
 
@@ -92,10 +98,10 @@ body {
   margin: 0 0 0 10px;
 }
 .restaurant_pin_info__icon {
+  font-size: 20px;
   position: relative;
   top: -40%;
   left: 90%;
-  font-size: 20px;
 }
 
 header {
@@ -118,7 +124,7 @@ header {
   font-weight: 500;
 }
 .footer__icon {
-  width: 5%;
+  width: 25px;
 }
 .footer__link {
   text-decoration: none;
