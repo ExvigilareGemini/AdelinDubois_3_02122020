@@ -23,7 +23,7 @@
 }
 
 // Centrage avec flex_centered_column + alignement du titre à gauche
-@mixin flex_centered_RestoFunct {
+@mixin flex_centered_HeadLeft {
   @include flex_centered_column;
   justify-content: space-evenly;
   &__head {

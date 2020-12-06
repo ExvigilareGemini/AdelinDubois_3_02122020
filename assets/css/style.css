@@ -259,6 +259,7 @@ body {
 .restaurant__head {
   font-size: 25px;
   margin-bottom: 0;
+  font-size: 25px;
 }
 
 .presentation {
@@ -273,6 +274,52 @@ body {
   object-fit: cover;
   width: inherit;
   height: inherit;
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -60px;
+  border-radius: 50px;
+}
+.carte__container_head {
+  margin-top: 10px;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carte__head {
+  font-size: 25px;
+  font-family: "Shrikhand", cursive;
+}
+.carte__icon {
+  font-size: 25px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.menu__head {
+  align-self: flex-start;
+  margin-left: 20px;
+}
+.menu__head {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.menu__head__border-bottom {
+  margin-left: 20px;
+  width: 40px;
+  border-bottom: 3px solid #99e2d0;
+  align-self: flex-start;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+.carte {
+  @include flex_centered_column;
+  position: relative;
+  top: -60px;
+  border-radius: 50px;
+  &__container_head {
+    margin-top: 10px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__head {
+    font-size: map-get($map: $font_size, $key: head_big);
+    font-family: $font_special;
+  }
+  &__icon {
+    font-size: map-get($map: $font_size, $key: head_big);
+  }
+}
+
+.menu {
+  @include flex_centered_HeadLeft;
+  width: 100%;
+  &__head {
+    font-size: map-get($map: $font_size, $key: p_mid);
+    font-weight: 400;
+    margin-bottom: 5px;
+    &__border-bottom {
+      margin-left: 20px;
+      width: 40px;
+      border-bottom: 3px solid map-get($map: $colors, $key: tertiary);
+      align-self: flex-start;
+    }
+  }
+}

@@ -1,9 +1,10 @@
 .restaurant {
     // Centrage des éléments de la section
-    @include flex_centered_RestoFunct;
+    @include flex_centered_HeadLeft;
   padding-bottom: 30px;
     &__head {
       font-size: map-get($map: $font_size, $key: head_big);
       margin-bottom: 0;
+      font-size: map-get($map: $font_size, $key: head_big);
     }
   }
