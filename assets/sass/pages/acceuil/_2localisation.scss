@@ -26,4 +26,7 @@
   &__text {
     font-size: map-get($map: $font_size, $key: p_mid);
   }
+  &__button {
+    padding: 0 20px;
+  }
 }

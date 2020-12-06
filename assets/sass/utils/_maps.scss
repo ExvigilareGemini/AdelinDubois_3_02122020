@@ -26,7 +26,7 @@ $box_height: (
     restaurant: 1250px,
     footer: 200px,
     presentation: 260px,
-    carte: 1200px
+    carte: auto
 );
 
 $section_param: (
@@ -68,6 +68,7 @@ $section_param: (
 );
 
 $font_size: (
+    p_verysm: 14px,
     p_sm: 16px,
     p_mid: 17px,
     head_big: 25px,
