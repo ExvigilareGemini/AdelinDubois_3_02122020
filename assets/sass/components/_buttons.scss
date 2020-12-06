@@ -1,4 +1,5 @@
 .localisation_info__button {
+  @include shadow;
   height: 50px;
   border: none;
   border-radius: 50px;
@@ -17,6 +18,7 @@
 
 .functioning_steps {
   @include flex_centered_row;
+  @include shadow;
 
   height: 75px;
   width: 80%;

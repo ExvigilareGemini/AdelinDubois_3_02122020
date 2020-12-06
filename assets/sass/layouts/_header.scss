@@ -1,5 +1,8 @@
+
+
 .header {
-    @include flex_centered_column;
+    @include flex_centered_column; 
+    z-index: 10;
     justify-content: center;
     &__link {
         height: 30px;

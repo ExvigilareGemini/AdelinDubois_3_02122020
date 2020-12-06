@@ -8,20 +8,21 @@
   }
 }
 
-// Centrage avec flexbox
+// Centrage des enfants avec flexbox -> flex-direction : column
 @mixin flex_centered_column {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+// Centrage des enfants avec flexbox -> flex-direction : row
 @mixin flex_centered_row {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-// Centrage flex_centered + alignement du titre à gauche
+// Centrage avec flex_centered_column + alignement du titre à gauche
 @mixin flex_centered_RestoFunct {
   @include flex_centered_column;
   justify-content: space-evenly;
@@ -31,14 +32,27 @@
   }
 } 
 
+// Création d'un cadre limitant la taille d'une image à contenir pour affichage (pin, preview,...)
 @mixin cadre ($height: 100%, $width: 100%) {
   overflow: hidden;
   height: $height;
   width: $width;
 }
 
+// Utilisé avec la mixin cadre (ci dessus) en tant que container
+// Réajustement de l'image au cadre
 @mixin objet_fit {
   object-fit: cover;
-        width: inherit;
-        height: inherit;
+  width: inherit;
+  height: inherit;
+}
+
+@mixin shadow ($version: 0) {
+  
+  @if $version == 1 {
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1) inset;
+  }
+  @else {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  }
 }

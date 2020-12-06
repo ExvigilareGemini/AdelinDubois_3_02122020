@@ -1,4 +1,5 @@
 .restaurant_pin {
+    @include shadow;
     height: 250px;
     width: 90%;
     background-color: white;
