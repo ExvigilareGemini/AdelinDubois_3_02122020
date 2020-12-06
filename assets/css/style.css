@@ -70,6 +70,18 @@ body {
   flex-direction: column;
   border-radius: 15px;
 }
+.restaurant_pin__new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10%;
+  width: 80px;
+  height: 30px;
+  background-color: #99e2d0;
+  color: #008766;
+  font-weight: 500;
+}
 .restaurant_pin__link {
   position: absolute;
   width: 90%;
