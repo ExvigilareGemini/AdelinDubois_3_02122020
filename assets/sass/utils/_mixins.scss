@@ -32,6 +32,14 @@
   }
 } 
 
+// Centrage avec flex_centered_row + alignement du titre à gauche
+@mixin flex_wrapping {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+} 
+
 // Création d'un cadre limitant la taille d'une image à contenir pour affichage (pin, preview,...)
 @mixin cadre ($height: 100%, $width: 100%) {
   overflow: hidden;

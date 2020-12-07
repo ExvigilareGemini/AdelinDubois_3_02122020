@@ -1,27 +1,36 @@
 .restaurant {
   // Centrage des éléments de la section
   @include flex_centered_HeadLeft;
+  flex-wrap: wrap;
   padding-bottom: 30px;
   &__head {
     font-size: map-get($map: $font_size, $key: head_big);
     margin-bottom: 0;
     font-size: map-get($map: $font_size, $key: head_big);
   }
+  @include tablet_format {
+    @include flex_wrapping;
+    &__head {
+      width: 100%;
+    }
+  }
 }
 
 .restaurant_pin {
   @include shadow;
-  height: 250px;
-  width: 90%;
-  background-color: white;
   display: flex;
   flex-direction: column;
+  position: relative;
+  height: 250px;
+  width: 90%;
+  margin: $pdl 0;
+  background-color: white;
   border-radius: $br;
 
   &__new {
     @include flex_centered_row;
     position: absolute;
-    right: 10%;
+    left: 75%;
     width: 80px;
     height: 30px;
     background-color: map-get($map: $colors, $key: tertiary);
@@ -30,7 +39,7 @@
   }
   &__link {
     position: absolute;
-    width: 90%;
+    width: inherit;
     height: 250px;
     border-radius: $br;
     z-index: 10;
@@ -38,6 +47,9 @@
 
   @include tablet_format {
     width: 40%;
+    &__new  {
+      left: 70%;
+    }
   }
 }
 

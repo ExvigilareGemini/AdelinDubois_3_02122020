@@ -40,12 +40,12 @@
   }
   &__icon {
     width: 20px;
-    margin-left: 20px;
+    margin-left: $pdl;
     font-size: map-get($map: $font_size, $key: icon_size);
     color: map-get($map: $colors, $key: dark_grey_color);
   }
   &__text {
-    margin-left: 20px;
+    margin-left: $pdl;
     font-weight: 600;
   }
 
