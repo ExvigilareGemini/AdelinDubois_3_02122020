@@ -27,5 +27,10 @@
             font-weight: 600;
         }
     }
+
+
+    @include tablet_format {
+        @include flex_centered_column;
+    }
 }
 
