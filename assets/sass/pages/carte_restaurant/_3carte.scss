@@ -1,7 +1,9 @@
 .carte {
   @include flex_centered_column;
-  position: relative;
-  top: -60px;
+  // position: relative;
+  width: 100%;
+  max-width: 600px;
+  // top: -60px;
   border-radius: $br_big $br_big 0 0;
   &__container_head {
     margin-top: 10px;

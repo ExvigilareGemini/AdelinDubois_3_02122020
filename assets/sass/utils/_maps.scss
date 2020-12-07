@@ -58,12 +58,14 @@ $section_param: (
     presentation:(
         param_height: map-get($map: $box_height, $key: presentation),
         param_color: map-get($map: $colors, $key: presentation),
-        param_margin: 0
+        // Avec absolute, permet de passer sous le header 
+        param_margin: 60px 0 0 0
     ),
     carte:(
         param_height: map-get($map: $box_height, $key: carte),
         param_color: map-get($map: $colors, $key: carte),
-        param_margin: 0
+        // Permet de superposer avec la présentation
+        param_margin: 200px 0 0 0
     )
 );
 
