@@ -1,6 +1,11 @@
 .localisation {
   // Centrage des éléments de la section
   @include flex_centered_column;
+
+  // Media-queries
+  @include tablet_format {
+    width: 50%;
+  }
 }
 
 .localisation_position {
@@ -9,6 +14,8 @@
   @include shadow (1);
   width: 100%;
   background-color: map-get($map: $colors, $key: grey_color);
+
+
 
   &__icon {
     margin: 0 10px 0 -30px;
@@ -28,5 +35,6 @@
   }
   &__button {
     padding: 0 20px;
+    margin-bottom: 50px;
   }
 }

@@ -21,8 +21,8 @@ $colors: (
 
 $box_height: (
     header: 60px,
-    localisation: 340px, 
-    functioning: 440px,
+    localisation: auto, 
+    functioning: auto,
     restaurant: 1250px,
     footer: 200px,
     presentation: 260px,
@@ -73,4 +73,9 @@ $font_size: (
     p_mid: 17px,
     head_big: 25px,
     icon_size: 20px
+);
+
+$breakpoints: (
+    tablet: 765px,
+    laptop: 1024px
 )

@@ -2,19 +2,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 100%;
     color: map-get($map: $colors, $key: white_color);
-    padding: 10px 0 30px 20px;
+    padding: 15px 0;
 
     &__head {
+        padding-left: $pdl_f;
         font-family: $font_special;
         font-size: map-get($map: $font_size, $key: p_mid);
         font-weight: 500;
     }
 
     &__icon {
-        width: 25px;
+        padding-left: $pdl_f;
+        width: 5px;
     }
     &__link {
+        padding-left: $pdl_f;
         text-decoration: none;
         color: map-get($map: $colors, $key: white_color);
         font-size: map-get($map: $font_size, $key: p_sm);      
@@ -24,3 +28,4 @@
         }
     }
 }
+

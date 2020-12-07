@@ -1,7 +1,14 @@
 .body {
-    margin: 0;
-    &--grey {
-        background-color: map-get($map: $colors, $key: light_grey_color);
-    }
-}
+  margin: 0;
+  &--grey {
+    background-color: map-get($map: $colors, $key: light_grey_color);
+  }
 
+  &__acceuil {
+    // Media-queries
+    @include tablet_format {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -8,18 +8,17 @@
 // base
 @import "./base/typography";
 @import "./base/body";
+//      Initialisation de la taille des sections
+@import "./base/0global";
 
 // components
 @import "./components/buttons";
-@import "./components/pin";
 
 // layouts
 @import "./layouts/header";
 @import "./layouts/footer";
 
 // pages
-//      Initialisation de la taille des sections
-@import "./pages/0global";
 //      page d'acceuil
 @import "./pages/acceuil/2localisation";
 @import "./pages/acceuil/3functioning";

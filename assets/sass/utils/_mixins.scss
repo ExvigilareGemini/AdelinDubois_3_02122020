@@ -56,3 +56,9 @@
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   }
 }
+
+@mixin tablet_format {
+  @media screen and (min-width: map-get($map: $breakpoints, $key: tablet)) {
+    @content;
+  }
+}
