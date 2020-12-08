@@ -8,7 +8,7 @@
   }
 
   // Media-queries
-  @include tablet_format {
+  @include tablet_pc_format {
     @include shadow(1);
     @include flex_centered_column;
     width: 50%;

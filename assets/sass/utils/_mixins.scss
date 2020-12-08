@@ -68,7 +68,7 @@
   }
 }
 
-@mixin tablet_format {
+@mixin tablet_pc_format {
   @media screen and (min-width: map-get($map: $breakpoints, $key: tablet)) {
     @content;
   }

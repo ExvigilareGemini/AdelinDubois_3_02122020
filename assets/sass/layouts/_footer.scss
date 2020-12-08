@@ -29,7 +29,7 @@
     }
 
 
-    @include tablet_format {
+    @include tablet_pc_format {
         @include flex_centered_column;
     }
 }

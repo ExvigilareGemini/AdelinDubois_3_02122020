@@ -5,7 +5,7 @@
   
 
   // Media-queries
-  @include tablet_format {
+  @include tablet_pc_format {
     width: 50%;
     max-width: 520px;
   }

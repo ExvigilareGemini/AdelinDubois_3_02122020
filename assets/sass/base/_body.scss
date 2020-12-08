@@ -10,12 +10,12 @@
     @include shadow(2);
     max-width: 1040px;
     // Media-queries
-    @include tablet_format {
+    @include tablet_pc_format {
       display: flex;
       flex-wrap: wrap;
     }
   }
-  @include tablet_format {
+  @include tablet_pc_format {
     @include flex_centered_column;
   }
 }

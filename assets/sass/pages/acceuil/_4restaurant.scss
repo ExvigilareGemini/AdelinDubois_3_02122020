@@ -9,7 +9,7 @@
     margin-bottom: 0;
     font-size: map-get($map: $font_size, $key: head_big);
   }
-  @include tablet_format {
+  @include tablet_pc_format {
     @include flex_wrapping;
     &__head {
       width: 100%;
@@ -45,7 +45,7 @@
     z-index: 10;
   }
 
-  @include tablet_format {
+  @include tablet_pc_format {
     width: 40%;
   }
 }
