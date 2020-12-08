@@ -14,10 +14,21 @@ p, a {
   flex-direction: column;
   align-items: center;
 }
+.body__container_content {
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1040px;
+}
 @media screen and (min-width: 765px) {
-  .body__acceuil {
+  .body__container_content {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 765px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -131,6 +142,7 @@ p, a {
 @media screen and (min-width: 765px) {
   .localisation {
     width: 50%;
+    max-width: 520px;
   }
 }
 
@@ -150,6 +162,7 @@ p, a {
 .localisation_info {
   text-align: center;
   width: 80%;
+  max-width: 350px;
 }
 .localisation_info__head {
   font-size: 25px;
@@ -183,6 +196,7 @@ p, a {
     flex-direction: column;
     align-items: center;
     width: 50%;
+    max-width: 520px;
   }
   .functioning__head {
     margin-left: 0;
@@ -238,6 +252,7 @@ p, a {
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding-bottom: 30px;
+  max-width: 1040px;
 }
 .restaurant__head {
   align-self: flex-start;

@@ -3,6 +3,7 @@
   @include flex_centered_HeadLeft;
   flex-wrap: wrap;
   padding-bottom: 30px;
+  max-width: 1040px;
   &__head {
     font-size: map-get($map: $font_size, $key: head_big);
     margin-bottom: 0;

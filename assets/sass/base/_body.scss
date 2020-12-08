@@ -1,15 +1,21 @@
 .body {
+  
   margin: 0;
   &__carte {
     @include flex_centered_column;
     // background-color: map-get($map: $colors, $key: light_grey_color);
   }
 
-  &__acceuil {
+  &__container_content {
+    @include shadow(2);
+    max-width: 1040px;
     // Media-queries
     @include tablet_format {
       display: flex;
       flex-wrap: wrap;
     }
+  }
+  @include tablet_format {
+    @include flex_centered_column;
   }
 }

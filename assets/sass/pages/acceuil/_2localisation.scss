@@ -2,9 +2,12 @@
   // Centrage des éléments de la section
   @include flex_centered_column;
 
+  
+
   // Media-queries
   @include tablet_format {
     width: 50%;
+    max-width: 520px;
   }
 }
 
@@ -26,6 +29,7 @@
 .localisation_info {
   text-align: center;
   width: 80%;
+  max-width: 350px;
   &__head {
     font-size: map-get($map: $font_size, $key: head_big);
     font-weight: 600;
