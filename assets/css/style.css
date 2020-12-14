@@ -180,9 +180,7 @@ p, a {
   justify-content: space-evenly;
 }
 .functioning__head {
-  align-self: flex-start;
-  margin-left: 20px;
-  width: 100%;
+  width: 95%;
 }
 .functioning__head {
   font-size: 25px;
@@ -260,9 +258,7 @@ p, a {
   padding-bottom: 30px;
 }
 .restaurant__head {
-  align-self: flex-start;
-  margin-left: 20px;
-  width: 100%;
+  width: 95%;
 }
 .restaurant__head {
   font-size: 25px;
@@ -410,9 +406,7 @@ p, a {
   width: 100%;
 }
 .menu__head {
-  align-self: flex-start;
-  margin-left: 20px;
-  width: 100%;
+  width: 95%;
 }
 .menu__head {
   font-size: 17px;
