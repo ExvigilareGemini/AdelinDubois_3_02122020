@@ -1,21 +1,9 @@
 .body {
-  
+  // Création des sectios de la page d'acceuil : header, localisation, functionning, restaurant et footer
+  @include section_creation($section_param);
   margin: 0;
+  
   &__carte {
-    @include flex_centered_column;
-    // background-color: map-get($map: $colors, $key: light_grey_color);
-  }
-
-  &__container_content {
-    @include shadow(2);
-    max-width: 1040px;
-    // Media-queries
-    @include tablet_pc_format {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-  @include tablet_pc_format {
     @include flex_centered_column;
   }
 }

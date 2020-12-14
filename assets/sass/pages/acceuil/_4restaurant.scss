@@ -3,17 +3,16 @@
   @include flex_centered_HeadLeft;
   flex-wrap: wrap;
   padding-bottom: 30px;
-  max-width: 1040px;
   &__head {
     font-size: map-get($map: $font_size, $key: head_big);
     margin-bottom: 0;
     font-size: map-get($map: $font_size, $key: head_big);
   }
-  @include tablet_pc_format {
+  @include tablet_format {
     @include flex_wrapping;
-    &__head {
-      width: 100%;
-    }
+  }
+  @include desktop_format {
+    @include flex_wrapping;
   }
 }
 
@@ -31,7 +30,7 @@
   &__new {
     @include flex_centered_row;
     position: absolute;
-    right: 10%;
+    right: 5%;
     width: 80px;
     height: 30px;
     background-color: map-get($map: $colors, $key: tertiary);
@@ -45,8 +44,12 @@
     z-index: 10;
   }
 
-  @include tablet_pc_format {
+  @include tablet_format {
     width: 40%;
+  }
+
+  @include desktop_format {
+    width: 20%;
   }
 }
 
@@ -77,6 +80,6 @@
   &__icon {
     font-size: map-get($map: $font_size, $key: icon_size);
     position: absolute;
-    left: 85%;
+    right: 5%;
   }
 }

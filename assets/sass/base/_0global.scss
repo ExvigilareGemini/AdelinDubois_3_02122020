@@ -1,4 +1,5 @@
-// Création des sectios de la page d'acceuil : header, localisation, functionning, restaurant et footer
-.body {
-    @include section_creation($section_param);
-  }
+.main {
+    @include tablet_format {
+        @include flex_wrapping;
+    }
+}

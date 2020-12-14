@@ -1,36 +1,37 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  color: map-get($map: $colors, $key: white_color);
+  padding: 15px 0;
+
+  &__head {
+    padding-left: $pdl;
+    font-family: $font_special;
+    font-size: map-get($map: $font_size, $key: p_mid);
+    font-weight: 500;
+  }
+
+  &__icon {
+    padding-left: $pdl;
+    width: 5px;
+  }
+  &__link {
+    padding-left: $pdl;
+    text-decoration: none;
     color: map-get($map: $colors, $key: white_color);
-    padding: 15px 0;
+    font-size: map-get($map: $font_size, $key: p_sm);
 
-    &__head {
-        padding-left: $pdl;
-        font-family: $font_special;
-        font-size: map-get($map: $font_size, $key: p_mid);
-        font-weight: 500;
+    &--bold {
+      font-weight: 600;
     }
+  }
 
-    &__icon {
-        padding-left: $pdl;
-        width: 5px;
-    }
-    &__link {
-        padding-left: $pdl;
-        text-decoration: none;
-        color: map-get($map: $colors, $key: white_color);
-        font-size: map-get($map: $font_size, $key: p_sm);      
-        
-        &--bold {
-            font-weight: 600;
-        }
-    }
-
-
-    @include tablet_pc_format {
-        @include flex_centered_column;
-    }
+  @include tablet_format {
+    @include flex_centered_column;
+  }
+  @include desktop_format {
+    @include flex_centered_column;
+  }
 }
-

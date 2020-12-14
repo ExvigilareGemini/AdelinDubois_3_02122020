@@ -29,8 +29,9 @@
   &__head {
     align-self: flex-start;
     margin-left: 20px;
+    width: 100%;
   }
-} 
+}
 
 // Centrage avec flex_centered_row + alignement du titre à gauche
 @mixin flex_wrapping {
@@ -38,10 +39,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-} 
+}
 
 // Création d'un cadre limitant la taille d'une image à contenir pour affichage (pin, preview,...)
-@mixin cadre ($height: 100%, $width: 100%) {
+@mixin cadre($height: 100%, $width: 100%) {
   overflow: hidden;
   height: $height;
   width: $width;
@@ -55,21 +56,24 @@
   height: inherit;
 }
 
-@mixin shadow ($version: 0) {
-  
+@mixin shadow($version: 0) {
   @if $version == 1 {
-    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1) inset;
-  }
-  @else if $version == 2 {
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1) inset;
+  } @else if $version == 2 {
     box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
-  }
-  @else {
+  } @else {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   }
 }
 
-@mixin tablet_pc_format {
-  @media screen and (min-width: map-get($map: $breakpoints, $key: tablet)) {
+@mixin tablet_format {
+  @media screen and (min-width: map-get($map: $breakpoints, $key: tablet)) and (max-width: map-get($map: $breakpoints, $key: desktop)) {
+    @content;
+  }
+}
+
+@mixin desktop_format {
+  @media screen and (min-width: map-get($map: $breakpoints, $key: desktop)) {
     @content;
   }
 }

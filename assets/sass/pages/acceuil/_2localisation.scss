@@ -2,23 +2,18 @@
   // Centrage des éléments de la section
   @include flex_centered_column;
 
-  
-
   // Media-queries
-  @include tablet_pc_format {
+  @include tablet_format {
     width: 50%;
-    max-width: 520px;
   }
 }
 
 .localisation_position {
   // Centrage des éléments de la section
   @include flex_centered_row;
-  @include shadow (1);
+  @include shadow(1);
   width: 100%;
   background-color: map-get($map: $colors, $key: grey_color);
-
-
 
   &__icon {
     margin: 0 10px 0 -30px;

@@ -9,29 +9,6 @@ p, a {
 .body {
   margin: 0;
 }
-.body__carte {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.body__container_content {
-  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
-  max-width: 1040px;
-}
-@media screen and (min-width: 765px) {
-  .body__container_content {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-@media screen and (min-width: 765px) {
-  .body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .body .header {
   height: 60px;
   background-color: #ffffff;
@@ -66,6 +43,20 @@ p, a {
   height: auto;
   background-color: #f6f6f6;
   margin: 200px 0 0 0;
+}
+.body__carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 765px) and (max-width: 1300px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 .button--pink {
@@ -126,7 +117,14 @@ p, a {
 .footer__link--bold {
   font-weight: 600;
 }
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 765px) and (max-width: 1300px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1300px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -139,10 +137,9 @@ p, a {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 765px) and (max-width: 1300px) {
   .localisation {
     width: 50%;
-    max-width: 520px;
   }
 }
 
@@ -185,22 +182,26 @@ p, a {
 .functioning__head {
   align-self: flex-start;
   margin-left: 20px;
+  width: 100%;
 }
 .functioning__head {
   font-size: 25px;
 }
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 765px) and (max-width: 1300px) {
   .functioning {
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1) inset;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
-    max-width: 520px;
   }
-  .functioning__head {
-    margin-left: 0;
-    align-self: center;
+}
+@media screen and (min-width: 1300px) {
+  .functioning {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 
@@ -218,15 +219,15 @@ p, a {
   background-color: #f6f6f6;
 }
 .functioning_steps__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: -15px;
   color: #ffffff;
   background-color: #9356dc;
   height: 25px;
   width: 25px;
   border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .functioning_steps__icon {
   width: 20px;
@@ -244,6 +245,11 @@ p, a {
 .functioning_steps--selected__icon {
   color: #9356dc;
 }
+@media screen and (min-width: 1300px) {
+  .functioning_steps {
+    width: 25%;
+  }
+}
 
 .restaurant {
   display: flex;
@@ -252,26 +258,31 @@ p, a {
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding-bottom: 30px;
-  max-width: 1040px;
 }
 .restaurant__head {
   align-self: flex-start;
   margin-left: 20px;
+  width: 100%;
 }
 .restaurant__head {
   font-size: 25px;
   margin-bottom: 0;
   font-size: 25px;
 }
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 765px) and (max-width: 1300px) {
   .restaurant {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  .restaurant__head {
-    width: 100%;
+}
+@media screen and (min-width: 1300px) {
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 
@@ -291,7 +302,7 @@ p, a {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 10%;
+  right: 5%;
   width: 80px;
   height: 30px;
   background-color: #99e2d0;
@@ -304,9 +315,14 @@ p, a {
   height: 100%;
   z-index: 10;
 }
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 765px) and (max-width: 1300px) {
   .restaurant_pin {
     width: 40%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .restaurant_pin {
+    width: 20%;
   }
 }
 
@@ -340,7 +356,7 @@ p, a {
 .restaurant_pin_info__icon {
   font-size: 20px;
   position: absolute;
-  left: 85%;
+  right: 5%;
 }
 
 .presentation {
@@ -396,6 +412,7 @@ p, a {
 .menu__head {
   align-self: flex-start;
   margin-left: 20px;
+  width: 100%;
 }
 .menu__head {
   font-size: 17px;
