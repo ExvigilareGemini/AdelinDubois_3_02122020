@@ -61,12 +61,36 @@ p, a {
 
 .button--pink {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
   height: 50px;
   border: none;
   border-radius: 50px;
-  background-image: linear-gradient(170deg, #ff79da, #9356dc);
+  background: linear-gradient(170deg, #ff79da, #9356dc);
   color: #ffffff;
   font-size: 16px;
+}
+.button--pink:hover::after {
+  opacity: 0.1;
+}
+.button--pink::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  box-shadow: 0 5px 5px black;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(170deg, white, white);
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 300ms;
 }
 
 .header {
@@ -263,7 +287,6 @@ p, a {
 .restaurant__head {
   font-size: 25px;
   margin-bottom: 0;
-  font-size: 25px;
 }
 @media screen and (min-width: 765px) and (max-width: 1300px) {
   .restaurant {
@@ -349,10 +372,29 @@ p, a {
   font-size: 17px;
   margin: 0 10px;
 }
+.restaurant_pin_info__hidden_input {
+  position: absolute;
+  right: 5%;
+  visibility: hidden;
+  z-index: -10;
+}
+.restaurant_pin_info__hidden_input:checked + .restaurant_pin_info__icon--hidden {
+  opacity: 1;
+  transform: scale(1);
+}
 .restaurant_pin_info__icon {
   font-size: 20px;
   position: absolute;
   right: 5%;
+  cursor: pointer;
+  z-index: 50;
+}
+.restaurant_pin_info__icon--hidden {
+  color: #9356dc;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 500ms;
+  z-index: 60;
 }
 
 .presentation {
@@ -375,6 +417,7 @@ p, a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 100%;
   max-width: 600px;
   border-radius: 50px 50px 0 0;
@@ -390,8 +433,29 @@ p, a {
   font-size: 25px;
   font-family: "Shrikhand", cursive;
 }
+.carte__hidden_input {
+  position: absolute;
+  right: 5%;
+  visibility: hidden;
+  z-index: -10;
+}
+.carte__hidden_input:checked + .carte__icon--hidden {
+  opacity: 1;
+  transform: scale(1);
+}
 .carte__icon {
   font-size: 25px;
+  position: absolute;
+  right: 10%;
+  cursor: pointer;
+  z-index: 50;
+}
+.carte__icon--hidden {
+  color: #9356dc;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 500ms;
+  z-index: 60;
 }
 .carte__button {
   margin: 50px 0;

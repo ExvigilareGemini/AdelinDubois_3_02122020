@@ -6,7 +6,6 @@
   &__head {
     font-size: map-get($map: $font_size, $key: head_big);
     margin-bottom: 0;
-    font-size: map-get($map: $font_size, $key: head_big);
   }
   @include tablet_format {
     @include flex_wrapping;
@@ -77,9 +76,28 @@
     font-size: map-get($map: $font_size, $key: p_mid);
     margin: 0 10px;
   }
+  &__hidden_input {
+    position: absolute;
+    right: 5%;
+    visibility: hidden;
+    z-index: -10;
+    &:checked + .restaurant_pin_info__icon--hidden {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
   &__icon {
     font-size: map-get($map: $font_size, $key: icon_size);
     position: absolute;
     right: 5%;
+    cursor: pointer;
+    z-index: 50;
+    &--hidden {
+      color: map-get($map: $colors, $key: primary);
+      opacity: 0;
+      transform: scale(0);
+      transition: all 500ms;
+      z-index: 60;
+    }
   }
 }

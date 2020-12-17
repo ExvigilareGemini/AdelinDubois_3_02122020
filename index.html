@@ -40,9 +40,7 @@
         <!-- Fonctionnement -->
         <section class="functioning">
             
-            <header>
-                <h2 class="functioning__head">Fonctionnement</h2>
-            </header>            
+            <h2 class="functioning__head">Fonctionnement</h2>
 
             <div class="functioning_steps">
                 <p class="functioning_steps__number">1</p>
@@ -68,10 +66,8 @@
         <!-- Restaurant -->
         <section class="restaurant">
 
-            <header>
-                <h2 class="restaurant__head">Restaurant</h2>
-            </header>
-            
+            <h2 class="restaurant__head">Restaurant</h2>
+
             <article class="restaurant_pin restaurant_pin--new">
                 <p class="restaurant_pin__new">Nouveau</p>
                 <a href="./vue/cartes/palette.html" class="restaurant_pin__link"></a>
@@ -81,7 +77,10 @@
                 <div class="restaurant_pin_info">
                     <h2 class="restaurant_pin_info__head">La palette du goût</h2>
                     <p class="restaurant_pin_info__adress">Ménilmontant</p>
-                    <i class="restaurant_pin_info__icon far fa-heart"></i>
+                    <!-- Input et label pour la transition du coeur quand on clique dessus, quand on clique le label, l'input est checked -> transition -->
+                        <input type="checkbox" id="hidden_input-1" class="restaurant_pin_info__hidden_input">
+                        <label for="hidden_input-1" class="restaurant_pin_info__icon restaurant_pin_info__icon--hidden fas fa-heart"></label>
+                        <label for="hidden_input-1" class="restaurant_pin_info__icon far fa-heart"></label>
                 </div>
             </article>
 
@@ -94,7 +93,10 @@
                 <div class="restaurant_pin_info">
                     <h2 class="restaurant_pin_info__head">La note enchantée</h2>
                     <p class="restaurant_pin_info__adress">Charonne</p>
-                    <i class="restaurant_pin_info__icon far fa-heart"></i>
+                    <!-- Input et label pour la transition du coeur quand on clique dessus, quand on clique le label, l'input est checked -> transition -->
+                        <input type="checkbox" id="hidden_input-2" class="restaurant_pin_info__hidden_input">
+                        <label for="hidden_input-2" class="restaurant_pin_info__icon restaurant_pin_info__icon--hidden fas fa-heart"></label>
+                        <label for="hidden_input-2" class="restaurant_pin_info__icon far fa-heart"></label>
                 </div>
             </article>
 
@@ -106,7 +108,10 @@
                 <div class="restaurant_pin_info">
                     <h2 class="restaurant_pin_info__head">À la française</h2>
                     <p class="restaurant_pin_info__adress">Cité Rouge</p>
-                    <i class="restaurant_pin_info__icon far fa-heart"></i>
+                    <!-- Input et label pour la transition du coeur quand on clique dessus, quand on clique le label, l'input est checked -> transition -->
+                        <input type="checkbox" id="hidden_input-3" class="restaurant_pin_info__hidden_input">
+                        <label for="hidden_input-3" class="restaurant_pin_info__icon restaurant_pin_info__icon--hidden fas fa-heart"></label>
+                        <label for="hidden_input-3" class="restaurant_pin_info__icon far fa-heart"></label>
                 </div>
             </article>
 
@@ -118,7 +123,10 @@
                 <div class="restaurant_pin_info">
                     <h2 class="restaurant_pin_info__head">Le délice des sens</h2>
                     <p class="restaurant_pin_info__adress">Folie-Méricourt</p>
-                    <i class="restaurant_pin_info__icon far fa-heart"></i>
+                    <!-- Input et label pour la transition du coeur quand on clique dessus, quand on clique le label, l'input est checked -> transition -->
+                        <input type="checkbox" id="hidden_input-4" class="restaurant_pin_info__hidden_input">
+                        <label for="hidden_input-4" class="restaurant_pin_info__icon restaurant_pin_info__icon--hidden fas fa-heart"></label>
+                        <label for="hidden_input-4" class="restaurant_pin_info__icon far fa-heart"></label>
                 </div>
             </article>
 
@@ -129,9 +137,7 @@
     <!-- Footer -->
     <footer class="footer">
 
-        <header>
-            <h2 class="footer__head">ohmyfood</h2>
-        </header>
+        <h2 class="footer__head">ohmyfood</h2>
 
         <div class="container_link">
             <i class="footer__icon fas fa-utensils"></i>
@@ -144,7 +150,7 @@
         </div>
 
         <a href="" class="footer__link">Mentions légales</a>
-        <a href="" class="footer__link">Contact</a>
+        <a href="mailto: ohmyfood@imaginaire.com" class="footer__link">Contact</a>
 
     </footer>
 

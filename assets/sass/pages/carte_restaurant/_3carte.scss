@@ -1,9 +1,8 @@
 .carte {
   @include flex_centered_column;
-  // position: relative;
+  position: relative;
   width: 100%;
   max-width: 600px;
-  // top: -60px;
   border-radius: $br_big $br_big 0 0;
   &__container_head {
     margin-top: 10px;
@@ -16,8 +15,29 @@
     font-size: map-get($map: $font_size, $key: head_big);
     font-family: $font_special;
   }
+  &__hidden_input {
+    position: absolute;
+    right: 5%;
+    visibility: hidden;
+    z-index: -10;
+    &:checked + .carte__icon--hidden {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
   &__icon {
     font-size: map-get($map: $font_size, $key: head_big);
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    z-index: 50;
+    &--hidden {
+      color: map-get($map: $colors, $key: primary);
+      opacity: 0;
+      transform: scale(0);
+      transition: all 500ms;
+      z-index: 60;
+    }
   }
   &__button {
     margin: 50px 0;

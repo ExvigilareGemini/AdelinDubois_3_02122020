@@ -55,13 +55,15 @@
 }
 
 @mixin shadow ($version: 0) {
-  
+  // bordure supérieure partie localisation et fonctionnement (format tablete)
   @if $version == 1 {
     box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1) inset;
   }
+  // ombre bouton plus sombre
   @else if $version == 2 {
-    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 1);
   }
+  // ombre de base -> bouton, steps, pins, plats
   @else {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   }

@@ -33,7 +33,10 @@
 
         <header class="carte__container_head">
             <h2 class="carte__head">La palette du goût</h2>
-            <i class="carte__icon far fa-heart"></i>
+            <!-- Input et label pour la transition du coeur quand on clique dessus, quand on clique le label, l'input est checked -> transition -->
+                <input type="checkbox" id="hidden_input-1" class="carte__hidden_input">
+                <label for="hidden_input-1" class="carte__icon carte__icon--hidden fas fa-heart"></label>
+                <label for="hidden_input-1" class="carte__icon far fa-heart"></label>
         </header>
         
         <!-- Menu des entrées -->
@@ -118,15 +121,13 @@
         </article>
         
         <button class="carte__button button--pink">Commander</button>
-
+        
     </article>
 
     <!-- Footer -->
     <footer class="footer">
 
-        <header>
-            <h2 class="footer__head">ohmyfood</h2>
-        </header>
+        <h2 class="footer__head">ohmyfood</h2>
 
         <div class="container_link">
             <i class="footer__icon fas fa-utensils"></i>
@@ -139,7 +140,7 @@
         </div>
 
         <a href="" class="footer__link">Mentions légales</a>
-        <a href="" class="footer__link">Contact</a>
+        <a href="mailto: ohmyfood@imaginaire.com" class="footer__link">Contact</a>
 
     </footer>
 
