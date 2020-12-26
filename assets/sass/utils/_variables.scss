@@ -27,3 +27,17 @@ $translateY_app_plats: 20px;
 $delai_app_plats: 0.2s;
 // Durée de l'animation de l'apparition des plats (mixin Appli_Anim_Plats)
 $time_app_plats: 1s;
+
+// ____________________________
+// --- Loader
+// - Animation
+// Durée totale de l'animation de la clochette
+$time_clochette_loader: 3s;
+// Durée animation du bouton pressé
+$time_bouton_clochette_loader: 0.3s;
+// Delai d'arrivée de la sonnette avant de la faire sonner
+$time_ding_bouton_clochette_loader: 1.5s;
+// Durée de la vibration de la cloche sonnée
+$time_vibration_clochette_loader: 0.4s;
+// Largeur d'une porte
+$porte_width: 100px;

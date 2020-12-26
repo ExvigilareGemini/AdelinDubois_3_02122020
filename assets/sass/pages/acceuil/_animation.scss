@@ -1,0 +1,88 @@
+.loader {
+    animation: Disparition 0.5s 2.5s forwards;
+}
+
+.svg_clochette {
+    animation: ClochetteLoader $time_clochette_loader both;
+    position: fixed;
+    left: 50%;
+    top: 55%;
+    transform: translate(-25%, 0);
+
+        &__bouton {
+            position: relative;
+            top: 6px;
+            animation: Ding_Clochette_loader $time_bouton_clochette_loader $time_ding_bouton_clochette_loader;
+        }
+        &__cloche {
+            animation: VibrationClocheSonnette $time_vibration_clochette_loader $time_ding_bouton_clochette_loader;
+        }
+
+
+}
+
+.porte {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -20;
+    &__encadrement {
+        display: flex;
+        justify-content: center;
+        z-index: -11111;
+        border-radius: 100px 100px 0 0;
+        overflow: hidden;
+    }
+    &__gauche {
+        width: $porte_width;
+        height: $porte_width*3;
+        border-radius: 100px 0 0;
+        z-index: -10;
+        background-color: map-get($map: $colors, $key: primary);
+        transform-origin: left;
+        // animation totale : 3s
+        animation: SesameOuvreToi 1s 0.5s+$time_ding_bouton_clochette_loader forwards; 
+    }
+    &__droite {
+        width: $porte_width;
+        height: $porte_width*3;
+        border-radius: 0 100px 0 0;
+        z-index: -10;
+        background-color: map-get($map: $colors, $key: primary);
+        transform-origin: right;
+        // animation totale : 3s
+        animation: SesameOuvreToi 1s 0.5s+$time_ding_bouton_clochette_loader forwards; 
+    }
+    &__lumiere {
+        position: absolute;
+        z-index: -100;
+        width: $porte_width*2;
+        height: $porte_width*3;
+        border-radius: 100px 100px 0 0;
+        background-color: map-get($map: $colors, $key: secondary);
+    }
+}
+
+.comptoir {
+    width: 100%;
+    height: 250px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 50vh;
+    z-index: -5;
+    &__dessus {
+        height: 25px;
+        background-color: map-get($map: $colors, $key: tertiary);
+    }
+    &__face {
+        height: 80px;
+        background-color: darken($color: map-get($map: $colors, $key: tertiary), $amount: 34%) ;
+    }
+}

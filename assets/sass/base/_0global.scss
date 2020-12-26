@@ -2,4 +2,6 @@
     @include tablet_format {
         @include flex_wrapping;
     }
+    animation: Disparition 0.5s 3s reverse backwards;
+
 }

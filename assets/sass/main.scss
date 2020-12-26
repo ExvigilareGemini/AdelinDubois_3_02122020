@@ -2,6 +2,7 @@
 @import "./utils/variables";
 @import "./utils/maps";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 
 // vendors
 
@@ -23,6 +24,7 @@
 @import "./pages/acceuil/2localisation";
 @import "./pages/acceuil/3functioning";
 @import "./pages/acceuil/4restaurant";
+@import "./pages/acceuil/animation";
 //      pages de cartes
 @import "./pages/carte_restaurant/2presentation";
 @import "./pages/carte_restaurant/3carte";

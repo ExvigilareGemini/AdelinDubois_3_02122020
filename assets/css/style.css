@@ -1,3 +1,56 @@
+@keyframes ApparitionPlats {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ClochetteLoader {
+  0% {
+    transform: translateX(-9999px);
+  }
+  33% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+@keyframes Ding_Clochette_loader {
+  10% {
+    transform: translateY(5px);
+  }
+}
+@keyframes VibrationClocheSonnette {
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+@keyframes SesameOuvreToi {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+@keyframes Disparition {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -50,6 +103,9 @@ p, a {
   align-items: center;
 }
 
+.main {
+  animation: Disparition 0.5s 3s reverse backwards;
+}
 @media screen and (min-width: 765px) and (max-width: 1300px) {
   .main {
     display: flex;
@@ -397,6 +453,90 @@ p, a {
   z-index: 60;
 }
 
+.loader {
+  animation: Disparition 0.5s 2.5s forwards;
+}
+
+.svg_clochette {
+  animation: ClochetteLoader 3s both;
+  position: fixed;
+  left: 50%;
+  top: 55%;
+  transform: translate(-25%, 0);
+}
+.svg_clochette__bouton {
+  position: relative;
+  top: 6px;
+  animation: Ding_Clochette_loader 0.3s 1.5s;
+}
+.svg_clochette__cloche {
+  animation: VibrationClocheSonnette 0.4s 1.5s;
+}
+
+.porte {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -20;
+}
+.porte__encadrement {
+  display: flex;
+  justify-content: center;
+  z-index: -11111;
+  border-radius: 100px 100px 0 0;
+  overflow: hidden;
+}
+.porte__gauche {
+  width: 100px;
+  height: 300px;
+  border-radius: 100px 0 0;
+  z-index: -10;
+  background-color: #9356dc;
+  transform-origin: left;
+  animation: SesameOuvreToi 1s 2s forwards;
+}
+.porte__droite {
+  width: 100px;
+  height: 300px;
+  border-radius: 0 100px 0 0;
+  z-index: -10;
+  background-color: #9356dc;
+  transform-origin: right;
+  animation: SesameOuvreToi 1s 2s forwards;
+}
+.porte__lumiere {
+  position: absolute;
+  z-index: -100;
+  width: 200px;
+  height: 300px;
+  border-radius: 100px 100px 0 0;
+  background-color: #ff79da;
+}
+
+.comptoir {
+  width: 100%;
+  height: 250px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 50vh;
+  z-index: -5;
+}
+.comptoir__dessus {
+  height: 25px;
+  background-color: #99e2d0;
+}
+.comptoir__face {
+  height: 80px;
+  background-color: #2ea084;
+}
+
 .presentation {
   position: absolute;
   z-index: -10;
@@ -526,20 +666,6 @@ p, a {
   margin: 0 10px 0 0;
   font-size: 16px;
   font-weight: 600;
-}
-
-@keyframes ApparitionPlats {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  95% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

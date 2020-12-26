@@ -96,18 +96,3 @@
   }
 }
 
-@keyframes ApparitionPlats {
-  0% {
-    opacity: 0;
-    transform: translateY($translateY_app_plats);
-  }
-
-  95% {
-    opacity: 0.8;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
