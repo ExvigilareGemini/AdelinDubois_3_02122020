@@ -80,3 +80,14 @@
     @content;    
   }
 }
+
+// Boucle d'application des animations sur chacun des plats avec un delay grandissant
+// NbrMaxDePlats est le nombre maximum de plats présent dans un menu (entrée, plat, dessert) parmis toutes les pages de restaurants, afin de créer une boucle qui contiendra tous les plats possile
+@mixin Appli_Anim_Plats ($NbrMaxDePlats : 1) {
+  @for $i from 1 through $NbrMaxDePlats {
+    // nth-child + 2 car la premier plat réagit au sélécteur nth-child(3)
+    &:nth-child(#{$i+2}) {
+      animation: ApparitionPlats $time_app_plats $i*$delai_app_plats forwards;
+    }
+  }
+}

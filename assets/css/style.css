@@ -494,6 +494,19 @@ p, a {
   margin-top: 15px;
   background-color: #ffffff;
   border-radius: 15px;
+  opacity: 0;
+}
+.plat:nth-child(3) {
+  animation: ApparitionPlats 1s 0.2s forwards;
+}
+.plat:nth-child(4) {
+  animation: ApparitionPlats 1s 0.4s forwards;
+}
+.plat:nth-child(5) {
+  animation: ApparitionPlats 1s 0.6s forwards;
+}
+.plat:nth-child(6) {
+  animation: ApparitionPlats 1s 0.8s forwards;
 }
 .plat__head {
   margin: 10px 0 5px 10px;
@@ -513,6 +526,20 @@ p, a {
   margin: 0 10px 0 0;
   font-size: 16px;
   font-weight: 600;
+}
+
+@keyframes ApparitionPlats {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

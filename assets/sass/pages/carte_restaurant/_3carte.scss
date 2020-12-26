@@ -63,6 +63,8 @@
 }
 
 .plat {
+  // Boucle d'application des animations sur chacun des plats avec un delay grandissant
+  @include Appli_Anim_Plats(4);
   @include shadow;
   display: flex;
   flex-direction: column;
@@ -72,6 +74,7 @@
   margin-top: 15px;
   background-color: map-get($map: $colors, $key: white_color);
   border-radius: $br;
+  opacity: 0;
   &__head {
     margin: 10px 0 5px 10px;
     font-size: map-get($map: $font_size, $key: p_mid);
@@ -90,5 +93,21 @@
     margin: 0 10px 0 0;
     font-size: map-get($map: $font_size, $key: p_sm);
     font-weight: 600;
+  }
+}
+
+@keyframes ApparitionPlats {
+  0% {
+    opacity: 0;
+    transform: translateY($translateY_app_plats);
+  }
+
+  95% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

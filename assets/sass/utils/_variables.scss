@@ -5,9 +5,25 @@ $font_special: 'Shrikhand', cursive;
 $br: 15px;
 $br_big: 50px;
 
-// padding
-//      padding/margin left
+// ------ Paddings
+// padding/margin left
 $pdl: 20px;
 
 // Intensité éclaircissement des couleurs des boutons
 $light_amount: 100;
+
+
+
+// ------ Animations
+// ____________________________
+// --- ApparitionPlats
+
+// - @KeyFrames
+// Position de base du plats avant le déplacement
+$translateY_app_plats: 20px;
+
+// - Animation
+// Délai ajouté et multiplié pour faire apparaitre les plats à des moment différents (mixin Appli_Anim_Plats)
+$delai_app_plats: 0.2s;
+// Durée de l'animation de l'apparition des plats (mixin Appli_Anim_Plats)
+$time_app_plats: 1s;
