@@ -51,6 +51,14 @@
     opacity: 0;
   }
 }
+@keyframes Rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -210,6 +218,90 @@ p, a {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.loader {
+  animation: Disparition 0.5s 2.5s forwards;
+}
+
+.svg_clochette {
+  animation: ClochetteLoader 3s both;
+  position: fixed;
+  left: 50%;
+  top: 55%;
+  transform: translate(-25%, 0);
+}
+.svg_clochette__bouton {
+  position: relative;
+  top: 6px;
+  animation: Ding_Clochette_loader 0.3s 1.5s;
+}
+.svg_clochette__cloche {
+  animation: VibrationClocheSonnette 0.4s 1.5s;
+}
+
+.porte {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -20;
+}
+.porte__encadrement {
+  display: flex;
+  justify-content: center;
+  z-index: -11111;
+  border-radius: 100px 100px 0 0;
+  overflow: hidden;
+}
+.porte__gauche {
+  width: 100px;
+  height: 300px;
+  border-radius: 100px 0 0;
+  z-index: -10;
+  background-color: #9356dc;
+  transform-origin: left;
+  animation: SesameOuvreToi 1s 2s forwards;
+}
+.porte__droite {
+  width: 100px;
+  height: 300px;
+  border-radius: 0 100px 0 0;
+  z-index: -10;
+  background-color: #9356dc;
+  transform-origin: right;
+  animation: SesameOuvreToi 1s 2s forwards;
+}
+.porte__lumiere {
+  position: absolute;
+  z-index: -100;
+  width: 200px;
+  height: 300px;
+  border-radius: 100px 100px 0 0;
+  background-color: #ff79da;
+}
+
+.comptoir {
+  width: 100%;
+  height: 250px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 50vh;
+  z-index: -5;
+}
+.comptoir__dessus {
+  height: 25px;
+  background-color: #99e2d0;
+}
+.comptoir__face {
+  height: 80px;
+  background-color: #2ea084;
 }
 
 .localisation {
@@ -453,90 +545,6 @@ p, a {
   z-index: 60;
 }
 
-.loader {
-  animation: Disparition 0.5s 2.5s forwards;
-}
-
-.svg_clochette {
-  animation: ClochetteLoader 3s both;
-  position: fixed;
-  left: 50%;
-  top: 55%;
-  transform: translate(-25%, 0);
-}
-.svg_clochette__bouton {
-  position: relative;
-  top: 6px;
-  animation: Ding_Clochette_loader 0.3s 1.5s;
-}
-.svg_clochette__cloche {
-  animation: VibrationClocheSonnette 0.4s 1.5s;
-}
-
-.porte {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -20;
-}
-.porte__encadrement {
-  display: flex;
-  justify-content: center;
-  z-index: -11111;
-  border-radius: 100px 100px 0 0;
-  overflow: hidden;
-}
-.porte__gauche {
-  width: 100px;
-  height: 300px;
-  border-radius: 100px 0 0;
-  z-index: -10;
-  background-color: #9356dc;
-  transform-origin: left;
-  animation: SesameOuvreToi 1s 2s forwards;
-}
-.porte__droite {
-  width: 100px;
-  height: 300px;
-  border-radius: 0 100px 0 0;
-  z-index: -10;
-  background-color: #9356dc;
-  transform-origin: right;
-  animation: SesameOuvreToi 1s 2s forwards;
-}
-.porte__lumiere {
-  position: absolute;
-  z-index: -100;
-  width: 200px;
-  height: 300px;
-  border-radius: 100px 100px 0 0;
-  background-color: #ff79da;
-}
-
-.comptoir {
-  width: 100%;
-  height: 250px;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  top: 50vh;
-  z-index: -5;
-}
-.comptoir__dessus {
-  height: 25px;
-  background-color: #99e2d0;
-}
-.comptoir__face {
-  height: 80px;
-  background-color: #2ea084;
-}
-
 .presentation {
   position: absolute;
   z-index: -10;
@@ -627,10 +635,10 @@ p, a {
 .plat {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column;
-  align-content: space-around;
+  flex-wrap: nowrap;
+  overflow: hidden;
   width: 95%;
-  min-height: 70px;
+  height: 65px;
   margin-top: 15px;
   background-color: #ffffff;
   border-radius: 15px;
@@ -648,24 +656,56 @@ p, a {
 .plat:nth-child(6) {
   animation: ApparitionPlats 1s 0.8s forwards;
 }
+.plat__container {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  height: 65px;
+}
 .plat__head {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   margin: 10px 0 5px 10px;
   font-size: 17px;
-}
-.plat__container {
-  display: flex;
-  align-items: center;
+  width: 100%;
 }
 .plat__detail {
-  width: 85%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-grow: 1;
   margin: 5px 0 5px 10px;
   font-size: 14px;
 }
 .plat__prix {
   width: 25px;
-  margin: 0 10px 0 0;
+  margin: 0 20px 5px 0;
   font-size: 16px;
   font-weight: 600;
+  flex-shrink: 0;
+  align-self: flex-end;
+}
+.plat__container_check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  background-color: #99e2d0;
+  flex-shrink: 0;
+  color: #ffffff;
+  border-radius: 0 15px 15px 0;
+  font-size: 25px;
+  transition: width 0.5s;
+}
+.plat:hover > .plat__container_check {
+  width: 70px;
+}
+.plat:hover .plat__checking {
+  animation: Rotation 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -18,13 +18,13 @@
 // layouts
 @import "./layouts/header";
 @import "./layouts/footer";
+@import "./layouts/loaderComptoirAcceuil";
 
 // pages
 //      page d'acceuil
 @import "./pages/acceuil/2localisation";
 @import "./pages/acceuil/3functioning";
 @import "./pages/acceuil/4restaurant";
-@import "./pages/acceuil/animation";
 //      pages de cartes
 @import "./pages/carte_restaurant/2presentation";
 @import "./pages/carte_restaurant/3carte";

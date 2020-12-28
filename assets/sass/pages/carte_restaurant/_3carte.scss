@@ -67,32 +67,61 @@
   @include Appli_Anim_Plats(4);
   @include shadow;
   display: flex;
-  flex-direction: column;
-  align-content: space-around;
+  flex-wrap: nowrap;
+  overflow: hidden;
   width: 95%;
-  min-height: 70px;
+  height: 65px;
   margin-top: 15px;
   background-color: map-get($map: $colors, $key: white_color);
   border-radius: $br;
   opacity: 0;
+  &__container {
+    @include TextEllipsis;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    height: 65px;
+  }
   &__head {
+    @include TextEllipsis;
     margin: 10px 0 5px 10px;
     font-size: map-get($map: $font_size, $key: p_mid);
-  }
-  &__container {
-    display: flex;
-    align-items: center;
+    width: 100%;
   }
   &__detail {
-    width: 85%;
+    @include TextEllipsis;
+    flex-grow: 1;
     margin: 5px 0 5px 10px;
     font-size: map-get($map: $font_size, $key: p_verysm);
   }
   &__prix {
     width: 25px;
-    margin: 0 10px 0 0;
+    margin: 0 20px 5px 0;
     font-size: map-get($map: $font_size, $key: p_sm);
     font-weight: 600;
+    flex-shrink: 0;
+    align-self: flex-end;
   }
-}
 
+
+
+  &__container_check {
+    @include flex_centered_row;
+    width: 0;
+    background-color: map-get($map: $colors, $key: tertiary);
+    flex-shrink: 0;
+    color: map-get($map: $colors, $key: white_color);
+    border-radius: 0 $br $br 0;
+    font-size: 25px;
+    transition: width 0.5s;
+  }
+
+  &:hover > .plat__container_check {
+    width: 70px;
+  }
+  
+  &:hover  .plat__checking {
+    animation: Rotation 0.5s;
+  }
+
+}

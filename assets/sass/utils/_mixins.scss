@@ -29,7 +29,7 @@
   &__head {
     width: 95%;
   }
-} 
+}
 
 // Centrage avec flex_centered_row + alignement du titre à gauche
 @mixin flex_wrapping {
@@ -37,10 +37,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-} 
+}
 
 // Création d'un cadre limitant la taille d'une image à contenir pour affichage (pin, preview,...)
-@mixin cadre ($height: 100%, $width: 100%) {
+@mixin cadre($height: 100%, $width: 100%) {
   overflow: hidden;
   height: $height;
   width: $width;
@@ -54,10 +54,10 @@
   height: inherit;
 }
 
-@mixin shadow ($version: 0) {
+@mixin shadow($version: 0) {
   // bordure supérieure partie localisation et fonctionnement (format tablete)
   @if $version == 1 {
-    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1) inset;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1) inset;
   }
   // ombre bouton plus sombre
   @else if $version == 2 {
@@ -76,18 +76,24 @@
 }
 
 @mixin desktop_format {
-  @media screen and (min-width: map-get($map: $breakpoints, $key: desktop)){
-    @content;    
+  @media screen and (min-width: map-get($map: $breakpoints, $key: desktop)) {
+    @content;
   }
 }
 
 // Boucle d'application des animations sur chacun des plats avec un delay grandissant
 // NbrMaxDePlats est le nombre maximum de plats présent dans un menu (entrée, plat, dessert) parmis toutes les pages de restaurants, afin de créer une boucle qui contiendra tous les plats possile
-@mixin Appli_Anim_Plats ($NbrMaxDePlats : 1) {
+@mixin Appli_Anim_Plats($NbrMaxDePlats: 1) {
   @for $i from 1 through $NbrMaxDePlats {
     // nth-child + 2 car la premier plat réagit au sélécteur nth-child(3)
-    &:nth-child(#{$i+2}) {
-      animation: ApparitionPlats $time_app_plats $i*$delai_app_plats forwards;
+    &:nth-child(#{$i + 2}) {
+      animation: ApparitionPlats $time_app_plats $i * $delai_app_plats forwards;
     }
   }
+}
+
+@mixin TextEllipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
