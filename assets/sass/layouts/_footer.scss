@@ -34,4 +34,7 @@
   @include desktop_format {
     @include flex_centered_column;
   }
+
+  animation: Disparition 0.5s 3s reverse backwards;
+
 }
