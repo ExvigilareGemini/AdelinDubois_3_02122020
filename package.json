@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/style.css"
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/style.css",
+    "prefix": "postcss ./assets/css/style.css --use autoprefixer -d ./assets/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/ExvigilareGemini/AdelinDubois_3_02122020/issues"
   },
-  "homepage": "https://github.com/ExvigilareGemini/AdelinDubois_3_02122020#readme"
+  "homepage": "https://github.com/ExvigilareGemini/AdelinDubois_3_02122020#readme",
+  "browserslist": "last 4 versions"
 }
