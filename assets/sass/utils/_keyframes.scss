@@ -43,9 +43,6 @@
 
 // Ouverture des portes
 @keyframes SesameOuvreToi {
-  0% {
-    transform: translateX(0);
-  }
   100% {
     transform: rotateY(90deg);
   }

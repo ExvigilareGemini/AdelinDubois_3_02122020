@@ -75,6 +75,7 @@
   background-color: map-get($map: $colors, $key: white_color);
   border-radius: $br;
   opacity: 0;
+  
   &__container {
     @include TextEllipsis;
     display: flex;
@@ -102,9 +103,6 @@
     flex-shrink: 0;
     align-self: flex-end;
   }
-
-
-
   &__container_check {
     @include flex_centered_row;
     width: 0;
@@ -119,9 +117,7 @@
   &:hover > .plat__container_check {
     width: 70px;
   }
-  
-  &:hover  .plat__checking {
+  &:hover .plat__checking {
     animation: Rotation 0.5s;
   }
-
 }
