@@ -7,7 +7,7 @@ An UI interface only, purpose here is to integrate a responsive web model with C
 # Technologies
  - HTML
  - CSS
- - SASS
+ - SCSS
 
 # Skills learned
  - Github repository management
