@@ -2,7 +2,7 @@
 
 [Site here](https://exvigilaregemini.github.io/AdelinDubois_3_02122020/)
 
-An UI interface only, purpose here is to integrate a responsive web model with CSS animations.
+An UI with simple navigation, purpose here is to integrate a responsive web model with CSS animations.
 
 # Technologies
  - HTML
